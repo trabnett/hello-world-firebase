@@ -1,15 +1,19 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Navbar from './components/layout/navbar'
+import Dashboard from './components/dashboard/dashboard'
+import ProjectDetails from './components/projects/project_details'
 require('dotenv').config()
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 id="bigOne">{process.env.REACT_APP_HELLO}</h1>
-        <h1>Hello World</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path='/' component={Dashboard} />
+        <Route path='/project/:id' component={ProjectDetails} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
