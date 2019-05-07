@@ -12,7 +12,7 @@ class CreateProject extends Component {
         e.preventDefault()
         // console.log(this.state)
         this.props.createProject(this.state)
-        this.setState({title: '', content: ''})
+        this.setState({title: '', content: ''}, this.props.history.push('/'))
     }
     handleChange = (e) => {
         this.setState({[e.target.id]: e.target.value})
