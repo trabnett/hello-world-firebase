@@ -4,10 +4,13 @@ import moment from 'moment'
 
 const Notifications = (props) => {
     const {notifications} = props
+    const style = {"text-align": "end"}
     return(
         <div>
             <div>
-                <span>Notifications</span>
+                <div style={style}>
+                    <h1>Notifications</h1>
+                </div>
                 <ul>
                     {notifications && notifications.map(item => {
                         return(

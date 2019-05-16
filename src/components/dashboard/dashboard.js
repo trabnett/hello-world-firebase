@@ -10,12 +10,13 @@ class Dashboard extends Component{
 
     render(){
         // console.log(this.props)
+        let style = {'display': 'flex'}
         const { projects, auth, notifications } = this.props
         if (!auth.uid){
             return <Redirect to='/signin' />
         }
         return(
-            <div className="dashboard container">
+            <div style={style}>
                 <div>
                     <ProjectList projects={projects}/>
                 </div>
