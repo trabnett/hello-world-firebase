@@ -3,6 +3,7 @@
     "rules": "database.rules.json"
   },
   "functions": {
+    "source": "functions"
   },
   "hosting": {
     "public": "dist",
@@ -10,12 +11,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
